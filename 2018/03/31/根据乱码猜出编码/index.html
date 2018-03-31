@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="spring-boot,jdbcTemplate," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,19 +87,19 @@
 
 
 
-<meta name="description" content="今天通过jdbcTemplate.query方法传入sql语句，进行结果处理时，选择了RowCallbackHandler的回调方式。刚开始自以为是的写出123while(rs.next())&amp;#123;	//处理逻辑&amp;#125;
-结果发现，结果总是少一条记录，当时觉得很奇怪，网上找了半天，才发现RowCallbackHandler的processRow回调方法本意就是方便的让你写出处理每一条数据">
+<meta name="description" content="有时java出现乱码后，想知道编码前的字符集和编码后的字符集，这样可以快速调整编码集纠正乱码，但是同样是乱码怎么看出来他编码前和编码后到底是什么字符集呢，今天闲来无聊我就写了个demo，尝试了一下。代码和结果如下：
+`        String source = “中文测试”;        Charset gbkCharset = Charset.forName(“gbk”);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RowCallbackHandler处理数据问题">
-<meta property="og:url" content="http://yoursite.com/2017/11/16/RowCallbackHandler处理数据问题/index.html">
+<meta property="og:title" content="根据乱码猜出编码">
+<meta property="og:url" content="http://yoursite.com/2018/03/31/根据乱码猜出编码/index.html">
 <meta property="og:site_name" content="龙之舞ing的博客">
-<meta property="og:description" content="今天通过jdbcTemplate.query方法传入sql语句，进行结果处理时，选择了RowCallbackHandler的回调方式。刚开始自以为是的写出123while(rs.next())&amp;#123;	//处理逻辑&amp;#125;
-结果发现，结果总是少一条记录，当时觉得很奇怪，网上找了半天，才发现RowCallbackHandler的processRow回调方法本意就是方便的让你写出处理每一条数据">
-<meta property="og:updated_time" content="2017-11-16T12:15:10.873Z">
+<meta property="og:description" content="有时java出现乱码后，想知道编码前的字符集和编码后的字符集，这样可以快速调整编码集纠正乱码，但是同样是乱码怎么看出来他编码前和编码后到底是什么字符集呢，今天闲来无聊我就写了个demo，尝试了一下。代码和结果如下：
+`        String source = “中文测试”;        Charset gbkCharset = Charset.forName(“gbk”);">
+<meta property="og:updated_time" content="2018-03-31T04:25:36.579Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RowCallbackHandler处理数据问题">
-<meta name="twitter:description" content="今天通过jdbcTemplate.query方法传入sql语句，进行结果处理时，选择了RowCallbackHandler的回调方式。刚开始自以为是的写出123while(rs.next())&amp;#123;	//处理逻辑&amp;#125;
-结果发现，结果总是少一条记录，当时觉得很奇怪，网上找了半天，才发现RowCallbackHandler的processRow回调方法本意就是方便的让你写出处理每一条数据">
+<meta name="twitter:title" content="根据乱码猜出编码">
+<meta name="twitter:description" content="有时java出现乱码后，想知道编码前的字符集和编码后的字符集，这样可以快速调整编码集纠正乱码，但是同样是乱码怎么看出来他编码前和编码后到底是什么字符集呢，今天闲来无聊我就写了个demo，尝试了一下。代码和结果如下：
+`        String source = “中文测试”;        Charset gbkCharset = Charset.forName(“gbk”);">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/16/RowCallbackHandler处理数据问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/31/根据乱码猜出编码/"/>
 
 
 
 
 
-  <title> RowCallbackHandler处理数据问题 | 龙之舞ing的博客 </title>
+  <title> 根据乱码猜出编码 | 龙之舞ing的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +262,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/16/RowCallbackHandler处理数据问题/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/根据乱码猜出编码/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="masonChen">
@@ -286,7 +286,7 @@
             
             
               
-                RowCallbackHandler处理数据问题
+                根据乱码猜出编码
               
             
           </h1>
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-16T20:12:35+08:00">
-                2017-11-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-31T12:13:44+08:00">
+                2018-03-31
               </time>
             
 
@@ -320,8 +320,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/16/RowCallbackHandler处理数据问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/11/16/RowCallbackHandler处理数据问题/" itemprop="commentCount"></span>
+                <a href="/2018/03/31/根据乱码猜出编码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/03/31/根据乱码猜出编码/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -347,8 +347,36 @@
       
 
       
-        <p>今天通过jdbcTemplate.query方法传入sql语句，进行结果处理时，选择了RowCallbackHandler的回调方式。刚开始自以为是的写出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while(rs.next())&#123;</div><div class="line">	//处理逻辑</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>结果发现，结果总是少一条记录，当时觉得很奇怪，网上找了半天，才发现RowCallbackHandler的processRow回调方法本意就是方便的让你写出处理每一条数据的处理逻辑。也就是说自己不必再循环获取每一条数据了。只要直接在方法里写出处理每一条数据的业务逻辑即可。</p>
+        <p>有时java出现乱码后，想知道编码前的字符集和编码后的字符集，这样可以快速调整编码集纠正乱码，但是同样是乱码怎么看出来他编码前和编码后到底是什么字符集呢，今天闲来无聊我就写了个demo，尝试了一下。代码和结果如下：</p>
+<p>`<br>        String source = “中文测试”;<br>        Charset gbkCharset = Charset.forName(“gbk”);<br>        Charset utf8Charset = Charset.forName(“utf-8”);<br>        Charset iso88591Charset = Charset.forName(“iso-8859-1”);</p>
+<pre><code>Charset defaultCharset = Charset.defaultCharset();
+
+System.out.printf(&quot;defaultCharset:%s%n&quot;, defaultCharset);
+
+System.out.println(StringUtils.repeat(&quot;=&quot;,20));
+
+String str1 = StringUtils.toEncodedString(source.getBytes(gbkCharset), utf8Charset);
+System.out.printf(&quot;gbk=&gt;utf-8：%s%n&quot;, str1);
+
+String str4 = StringUtils.toEncodedString(source.getBytes(utf8Charset), gbkCharset);
+System.out.printf(&quot;utf-8=&gt;gbk：%s%n&quot;, str4);
+
+String str2 = StringUtils.toEncodedString(source.getBytes(iso88591Charset), utf8Charset);
+System.out.printf(&quot;iso8859-1=&gt;utf-8：%s%n&quot;, str2);
+
+String str5 = StringUtils.toEncodedString(source.getBytes(utf8Charset), iso88591Charset);
+System.out.printf(&quot;utf-8=&gt;iso8859-1：%s%n&quot;, str5);
+
+String str3 = StringUtils.toEncodedString(source.getBytes(gbkCharset), iso88591Charset);
+System.out.printf(&quot;gbk=&gt;iso8859-1：%s%n&quot;, str3);
+
+String str6 = StringUtils.toEncodedString(source.getBytes(iso88591Charset), gbkCharset);
+System.out.printf(&quot;iso8859-1=&gt;gbk：%s%n&quot;, str6);`
+</code></pre><p>运行结果：</p>
+<p>defaultCharset:UTF-8<br>`=========================<br>gbk=&gt;utf-8：���Ĳ���<br>utf-8=&gt;gbk：涓枃娴嬭瘯<br>iso8859-1=&gt;utf-8：????<br>utf-8=&gt;iso8859-1：ä¸­ææµè¯<br>gbk=&gt;iso8859-1：ÖÐÎÄ²âÊÔ<br>iso8859-1=&gt;gbk：????</p>
+<p>我是用idea写的demo，项目代码文件默认编码是utf-8。这样是不是可以根据乱码的字符，大致判断出编码前和编码后的字符集从而调整相应的编码呢?</p>
+<p>声明：</p>
+<p>我没有系统的写单元测试，也不知道这个方法靠不靠谱，仅供参考</p>
 
       
     </div>
@@ -370,12 +398,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/spring-boot-jdbcTemplate/" rel="tag"># spring-boot,jdbcTemplate</a>
-          
-        </div>
-      
 
       
         
@@ -385,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/29/Hexo博客部署codingNet静态资源无法加载/" rel="next" title="Hexo博客部署codingNet静态资源无法加载">
-                <i class="fa fa-chevron-left"></i> Hexo博客部署codingNet静态资源无法加载
+              <a href="/2018/03/06/收藏的技术网站/" rel="next" title="收藏的技术网站">
+                <i class="fa fa-chevron-left"></i> 收藏的技术网站
               </a>
             
           </div>
@@ -394,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/27/安装gitlab-hook-plugin插件后，构建触发器没有构建选项/" rel="prev" title="安装gitlab-hook-plugin插件后，构建触发器没有构建选项">
-                安装gitlab-hook-plugin插件后，构建触发器没有构建选项 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -423,8 +441,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/11/16/RowCallbackHandler处理数据问题/"
-           data-title="RowCallbackHandler处理数据问题" data-url="http://yoursite.com/2017/11/16/RowCallbackHandler处理数据问题/">
+      <div class="ds-thread" data-thread-key="2018/03/31/根据乱码猜出编码/"
+           data-title="根据乱码猜出编码" data-url="http://yoursite.com/2018/03/31/根据乱码猜出编码/">
       </div>
     
   </div>
